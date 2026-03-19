@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#bcc3ff",
+              "surface-tint": "#b52619",
+              "secondary-fixed-dim": "#ffb4a8",
+              "secondary-container": "#fe9383",
+              "secondary-fixed": "#ffdad4",
+              "inverse-on-surface": "#f5f0e7",
+              "inverse-surface": "#32302a",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#7b2d23",
+              "surface-dim": "#ded9d1",
+              "tertiary-container": "#0025c8",
+              "primary-fixed": "#ffdad4",
+              "tertiary": "#00178d",
+              "surface-variant": "#e7e2d9",
+              "surface-container-highest": "#e7e2d9",
+              "on-primary-container": "#ff907f",
+              "outline-variant": "#e3beb8",
+              "error-container": "#ffdad6",
+              "primary-fixed-dim": "#ffb4a8",
+              "on-primary-fixed-variant": "#920703",
+              "error": "#ba1a1a",
+              "on-surface-variant": "#5a403c",
+              "secondary": "#9a4438",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#ede8de",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "background": "#fef9ef",
+              "primary-container": "#8b0000",
+              "surface": "#fef9ef",
+              "tertiary-fixed": "#dfe0ff",
+              "surface-bright": "#fef9ef",
+              "on-primary-fixed": "#410000",
+              "on-secondary-fixed": "#400201",
+              "on-background": "#1d1c16",
+              "primary": "#610000",
+              "on-tertiary-fixed-variant": "#0d2ccc",
+              "surface-container": "#f2ede4",
+              "on-tertiary-fixed": "#000d60",
+              "on-secondary-container": "#772a20",
+              "on-surface": "#1d1c16",
+              "on-error-container": "#93000a",
+              "outline": "#8e706b",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#ffb4a8",
+              "surface-container-low": "#f8f3ea",
+              "on-tertiary-container": "#9ea9ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(254, 249, 239, 1) 0%, rgba(248, 243, 234, 1) 100%);
+        }
+        .red-glow {
+            background: radial-gradient(circle at center, rgba(139, 0, 0, 0.03) 0%, transparent 70%);
+        }
+        .accent-border {
+            border: 1px solid rgba(139, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed-dim selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fef9ef]/80 backdrop-blur-md shadow-[0_40px_60px_-15px_rgba(29,28,22,0.05)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="font-['Manrope'] text-xl font-bold tracking-tighter text-stone-900">mitta AFRICA CENTRE</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Manrope'] font-medium text-sm tracking-tight text-stone-600 hover:text-stone-900 transition-colors hover:opacity-80 transition-all duration-300" href="#">Heritage</a>
+<a class="font-['Manrope'] font-bold text-sm tracking-tight text-[#8B0000] border-b-2 border-[#8B0000] pb-1" href="#">Pillars</a>
+<a class="font-['Manrope'] font-medium text-sm tracking-tight text-stone-600 hover:text-stone-900 transition-colors hover:opacity-80 transition-all duration-300" href="#">Focus Areas</a>
+<a class="font-['Manrope'] font-medium text-sm tracking-tight text-stone-600 hover:text-stone-900 transition-colors hover:opacity-80 transition-all duration-300" href="#">Archive</a>
+</div>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-sm text-sm font-bold tracking-wide hover:opacity-90 active:scale-95 transition-all">
+                Donate
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="absolute inset-0 red-glow pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 space-y-8">
+<span class="font-label text-[0.6875rem] uppercase tracking-[0.2em] text-primary font-semibold">EST. 2024</span>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface">
+                        mitta AFRICA CENTRE
+                    </h1>
+<p class="font-headline text-xl md:text-2xl text-on-surface-variant max-w-xl font-light">
+                        AFRICA’s first continental creative economy accelerator.
+                    </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary-container text-on-primary px-8 py-4 rounded-sm font-bold tracking-tight hover:opacity-90 transition-all">Explore the Archive</button>
+<button class="text-primary px-8 py-4 rounded-sm font-bold tracking-tight hover:bg-surface-container-high transition-all">Learn More</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden shadow-2xl">
+<img alt="African Contemporary Art" class="w-full h-full object-cover" data-alt="Abstract vibrant African textile patterns in high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIlRATxGT6LRbUsec2okU-vg7E4m-ExgyEI8vx_h1pjRetuEJdafAF7K7A2hUtOVkSx4u-Qjc0yfSJXUBAB8bUfCKkCc1DsTrgibto3y2Y-VZR7VBq48VyWKWJaEJVL5ljueoeRyaet_YO3inkezs4PzK6DWPeAU_6k4H7UvjFy5m6G-MCP-cEuNTUQ9CSTa1TbqEcFmyu3BcZs_pbN_HYIo6iiKP5PBT3pZtHmSN_73kkEtrEMhRpdJ-du-h4D6DkyUvjmG1opj0"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-xl max-w-[240px]">
+<p class="font-label text-[0.625rem] text-stone-400 uppercase tracking-widest mb-2">Current Exhibition</p>
+<p class="font-headline font-bold text-sm text-on-surface">Visualizing the Digital Renaissance across the Sahel.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pillars Section -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 space-y-4">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">Four pillars of The AFRICA CENTRE</h2>
+<p class="font-headline text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        Our mission is to cultivate a self-sustaining ecosystem where African creativity meets institutional rigor, transforming heritage into economic agency.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface-container-lowest hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="cognition">cognition</span>
+<h3 class="font-headline text-lg font-bold mb-3">Think tank</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Synthesizing policy and creative research to guide continental growth.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-headline text-lg font-bold mb-3">Creative economy accelerator</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Empowering creators with the tools and capital to scale globally.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="history_edu">history_edu</span>
+<h3 class="font-headline text-lg font-bold mb-3">Research and Residency</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Dedicated spaces for scholars and artists to forge new narratives.</p>
+</div>
+<div class="p-8 bg-surface-container-lowest hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="auto_stories">auto_stories</span>
+<h3 class="font-headline text-lg font-bold mb-3">Storytelling</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Amplifying the authentic voices of Africa through multi-media platforms.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Focus Areas Section -->
+<section class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="font-label text-[0.6875rem] uppercase tracking-[0.2em] text-primary font-semibold block mb-2">The Work</span>
+<h2 class="font-headline text-5xl font-extrabold tracking-tight">Key Focus Areas</h2>
+</div>
+<div class="w-32 h-[2px] bg-primary hidden md:block mb-4 opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- Area 1 -->
+<div class="accent-border group p-6 h-64 flex flex-col justify-between hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+<span class="font-label text-[0.625rem] opacity-50">01</span>
+<div>
+<span class="material-symbols-outlined mb-4 block" data-icon="lightbulb">lightbulb</span>
+<h4 class="font-headline text-xl font-bold">Innovation</h4>
+</div>
+</div>
+<!-- Area 2 -->
+<div class="accent-border group p-6 h-64 flex flex-col justify-between hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+<span class="font-label text-[0.625rem] opacity-50">02</span>
+<div>
+<span class="material-symbols-outlined mb-4 block" data-icon="connected_tv">connected_tv</span>
+<h4 class="font-headline text-xl font-bold">Media</h4>
+</div>
+</div>
+<!-- Area 3 -->
+<div class="accent-border group p-6 h-64 flex flex-col justify-between hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+<span class="font-label text-[0.625rem] opacity-50">03</span>
+<div>
+<span class="material-symbols-outlined mb-4 block" data-icon="biotech">biotech</span>
+<h4 class="font-headline text-xl font-bold">sTem</h4>
+</div>
+</div>
+<!-- Area 4 -->
+<div class="accent-border group p-6 h-64 flex flex-col justify-between hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+<span class="font-label text-[0.625rem] opacity-50">04</span>
+<div>
+<span class="material-symbols-outlined mb-4 block" data-icon="groups_2">groups_2</span>
+<h4 class="font-headline text-xl font-bold">Talent Development</h4>
+</div>
+</div>
+<!-- Area 5 -->
+<div class="accent-border group p-6 h-64 flex flex-col justify-between hover:bg-primary hover:text-white transition-all duration-500 cursor-pointer">
+<span class="font-label text-[0.625rem] opacity-50">05</span>
+<div>
+<span class="material-symbols-outlined mb-4 block" data-icon="palette">palette</span>
+<h4 class="font-headline text-xl font-bold">Art &amp; Culture</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Join Us Section -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto relative">
+<div class="absolute -right-20 -top-20 w-96 h-96 red-glow pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight">Join Us in Empowering AFRICA's Future. Be our Patron by donating to our first phase</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant font-medium">Contribute to building a state-of-the-art digital archive infrastructure.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant font-medium">Support residential scholarships for emerging Pan-African scholars.</p>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="check_circle">check_circle</span>
+<p class="text-on-surface-variant font-medium">Fund critical research into the creative economy's impact on GDP.</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary px-10 py-5 rounded-sm font-extrabold text-lg shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all">
+                            Become a Patron
+                        </button>
+</div>
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden">
+<img alt="Modern Architecture" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern geometric architectural details of a museum" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFkBzx_ZjqRL7vAgypEPxfcUTCiqugWzsMuBSs8vscEKg8MeSsMEYHFE5Fb5XbZKHNnTylAtlmuApaosSm5hGM6K9snoMlyOW2kYJSeONJ2ZwJ1yKW-J7duJzbCoDJYSe_Y6zdb28kw3OmyoX4hOkE1yaDhR9ODYytax05MYR5I8C5BrlVTT_doYTf1q2e0N-5n0cNzlveKb7uathvqtt_w-3o_aqL5JSnQCmOW00vECtmNCpzi4qCxjS46HhwV7kPKeF9gvRaVw8"/>
+</div>
+<div class="h-32 bg-primary-container p-6 flex flex-col justify-end">
+<p class="text-white font-bold text-2xl">Phase 01</p>
+<p class="text-white/70 text-[0.625rem] uppercase tracking-widest font-label">Foundations</p>
+</div>
+</div>
+<div class="pt-12 space-y-4">
+<div class="aspect-[4/5] bg-surface-container rounded-lg overflow-hidden shadow-2xl">
+<img alt="Archival work" class="w-full h-full object-cover" data-alt="Hands examining old historical documents with white gloves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0LMTCzYdEtiKRzIN0ppRC4brQdpv4irMO1TPiweHvo6RyB0AkGR4c6kXQcB3i9PP8POfjHVS9rS87yQNsYhis6pT1GDPCxkpJ31NeOyVr7Nn1ZY42-sFOMZ2cQRQS8wo4-l9uuWVjkod3uZEC_ZFRDzeRLsris4J2kqn4vUYKOYhEo27aGTpLAjriBBF7beo1wCh6b0uLaxjw3AT5x2FoA5s2szqEaVXcD2avive0maQ8t2JxrImsvTuh4ghRi6z9gpvlxuXciac"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 py-12 px-8 border-t border-stone-200">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-['Manrope'] font-bold text-stone-900">mitta AFRICA CENTRE</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.05em] text-stone-500 hover:text-stone-800 hover:underline decoration-[#8B0000] underline-offset-4 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.05em] text-stone-500 hover:text-stone-800 hover:underline decoration-[#8B0000] underline-offset-4 transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.05em] text-stone-500 hover:text-stone-800 hover:underline decoration-[#8B0000] underline-offset-4 transition-colors" href="#">Contact Us</a>
+<a class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.05em] text-stone-500 hover:text-stone-800 hover:underline decoration-[#8B0000] underline-offset-4 transition-colors" href="#">Press Kit</a>
+</div>
+<p class="font-['Inter'] text-[0.6875rem] uppercase tracking-[0.05em] text-stone-500">© 2024 mitta AFRICA CENTRE. All rights reserved.</p>
+</div>
+</footer>
+</body></html>
