@@ -93,17 +93,17 @@
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
   <!-- TopNavBar -->
-  <nav class="fixed top-0 w-full z-50 bg-[#fef9ef]/80 dark:bg-stone-950/80 backdrop-blur-md">
+  <nav id="top-nav" class="fixed top-0 w-full z-50 bg-transparent transition-colors duration-300">
     <div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
-      <div class="text-2xl font-bold tracking-tighter text-[#8B0000] dark:text-red-600 font-headline">mitta AFRICA</div>
+      <div id="nav-logo"
+        class="text-2xl font-bold tracking-tighter text-surface font-headline transition-colors duration-300">mitta
+        AFRICA</div>
       <div class="hidden md:flex gap-10 items-center">
-        <a class="text-stone-600 dark:text-stone-400 hover:text-[#8B0000] transition-colors font-headline font-medium tracking-tight"
+        <a class="nav-menu-item text-surface/80 text-sm dark:text-stone-400 hover:text-[#8B0000] transition-colors font-headline font-medium tracking-tight"
           href="#about-us">About Us</a>
-        <a class="text-stone-600 dark:text-stone-400 hover:text-[#8B0000] transition-colors font-headline font-medium tracking-tight"
-          href="#donate">Donate</a>
+        <a class="bg-primary-container text-on-primary px-6 py-2 rounded-sm font-label uppercase tracking-widest text-[11px] font-bold hover:bg-primary transition-all active:scale-95 duration-200"
+          href="#partner">Partnerships</a>
       </div>
-      <button
-        class="bg-primary-container text-on-primary px-6 py-2 rounded-sm font-label uppercase tracking-widest text-[11px] font-bold hover:bg-primary transition-all active:scale-95 duration-200">Donate</button>
     </div>
   </nav>
   <main>
@@ -126,8 +126,8 @@
             AFRICA’s first continental creative economy accelerator.
           </p>
           <div class="flex gap-6">
-            <a href="#donate"
-              class="bg-primary-container text-on-primary px-10 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:shadow-xl transition-all">Donate</a>
+            <a href="#partner"
+              class="bg-primary-container text-on-primary px-10 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:shadow-xl transition-all">Partnerships</a>
             <a href="#about-us"
               class="border border-on-primary/30 text-on-primary px-10 py-4 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:bg-on-primary hover:text-on-background transition-all">Learn
               More</a>
@@ -256,7 +256,7 @@
       </div>
     </section>
     <!-- Section 4: Join Us CTA -->
-    <section id="donate" class="py-48 bg-[#1d1c16] relative overflow-hidden">
+    <section id="partner" class="py-48 bg-[#1d1c16] relative overflow-hidden">
       <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
         <img alt="Archival texture" class="w-full h-full object-cover grayscale"
           data-alt="Subtle grayscale texture of old manuscript parchment"
@@ -307,6 +307,34 @@
       </div>
     </div>
   </footer>
+  <script>
+      (function () {
+        const nav = document.getElementById('top-nav');
+        const logo = document.getElementById('nav-logo');
+        const navMenuItem = document.getElementsByClassName('nav-menu-item');
+        if (!nav) return;
+
+        const scrolledClasses = ['bg-[#fef9ef]/80', 'dark:bg-stone-950/80', 'backdrop-blur-md'];
+        const threshold = 24;
+
+        function updateNavBackdrop() {
+          const shouldShowBackdrop = window.scrollY > threshold;
+          nav.classList.toggle('bg-transparent', !shouldShowBackdrop);
+          scrolledClasses.forEach((className) => nav.classList.toggle(className, shouldShowBackdrop));
+          if (navMenuItem.length > 0) {
+            Array.from(navMenuItem).forEach((item) => item.classList.toggle('text-surface', !shouldShowBackdrop));
+            Array.from(navMenuItem).forEach((item) => item.classList.toggle('text-stone-600', shouldShowBackdrop));
+          }
+          if (logo) {
+            logo.classList.toggle('text-surface', !shouldShowBackdrop);
+            logo.classList.toggle('text-[#8B0000]', shouldShowBackdrop);
+          }
+        }
+
+        updateNavBackdrop();
+        window.addEventListener('scroll', updateNavBackdrop, { passive: true });
+      })();
+  </script>
 </body>
 
 </html>
